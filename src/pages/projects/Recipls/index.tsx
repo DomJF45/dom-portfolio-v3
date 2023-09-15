@@ -45,6 +45,7 @@ const Recipls = () => {
           "React",
           "Go",
           "MongoDB",
+          "ChakraUI",
           "Typescript",
           "React-Query",
           "Redux",

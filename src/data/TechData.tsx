@@ -15,9 +15,11 @@ import {
   SiExpress,
   SiCplusplus,
   SiGo,
+  SiTmux,
 } from "react-icons/si";
 import { BsGit } from "react-icons/bs";
 import { TbBrandVscode } from "react-icons/tb";
+import { HiTerminal } from "react-icons/hi";
 import React from "react";
 
 const iconSize = 30;
@@ -39,7 +41,7 @@ const colorSchemeDark = {
 interface iTechData {
   name: string;
   icon: React.ReactNode;
-  level: "Proficient" | "Some" | "Learning" | "IDEs";
+  level: "Proficient" | "Some" | "Learning" | "Editors";
   lightColor: string;
   darkColor: string;
 }
@@ -111,14 +113,28 @@ export const techData: iTechData[] = [
   {
     name: "NeoVim",
     icon: <SiNeovim size={iconSize} />,
-    level: "IDEs",
+    level: "Editors",
+    lightColor: colorSchemeLight.ides,
+    darkColor: colorSchemeDark.ides,
+  },
+  {
+    name: "iTerm2",
+    icon: <HiTerminal size={iconSize} />,
+    level: "Editors",
+    lightColor: colorSchemeLight.ides,
+    darkColor: colorSchemeDark.ides,
+  },
+  {
+    name: "tmux",
+    icon: <SiTmux size={iconSize} />,
+    level: "Editors",
     lightColor: colorSchemeLight.ides,
     darkColor: colorSchemeDark.ides,
   },
   {
     name: "VS Code",
     icon: <TbBrandVscode size={iconSize} />,
-    level: "IDEs",
+    level: "Editors",
     lightColor: colorSchemeLight.ides,
     darkColor: colorSchemeDark.ides,
   },

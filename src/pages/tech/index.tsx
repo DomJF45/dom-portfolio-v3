@@ -17,7 +17,7 @@ const Technologies = () => {
   const [filter, setFilter] = useState("Proficient");
   const [filterIndex, setFilterIndex] = useState(0);
 
-  const dragFilterArr = ["Proficient", "Some", "Learning", "IDEs"];
+  const dragFilterArr = ["Proficient", "Some", "Learning", "Editors"];
 
   const handleDragFilter = () => {
     if (filterIndex === dragFilterArr.length) {
@@ -49,7 +49,7 @@ const Technologies = () => {
               <option value="Proficient">Proficient</option>
               <option value="Some">Some</option>
               <option value="Learning">Learning</option>
-              <option value="IDEs">IDEs</option>
+              <option value="Editors">Editors</option>
             </Select>
           </HStack>
           <Divider

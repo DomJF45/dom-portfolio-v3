@@ -26,6 +26,13 @@ export const ProjectData: iProjectData[] = [
     languages: ["React", "Go", "Typescript", "ChakraUI"],
   },
   {
+    name: "Design Patterns Website",
+    bio: "A website dedicated to design patterns that are implemented in Java",
+    img: "https://ik.imagekit.io/wvlrlc0tr/Portfolio/design-patterns/landing.png?updatedAt=1694751024329",
+    url: "/projects/design-patterns",
+    languages: ["React", "Typescript", "ChakraUI", "Java"],
+  },
+  {
     name: "xiv-minion-dex",
     bio: "A pokedex-like web app for Final Fantasy XIV Minions",
     img: "https://ik.imagekit.io/wvlrlc0tr/Portfolio/xiv-minion/xiv-minion?updatedAt=1684348483386",

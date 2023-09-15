@@ -20,6 +20,7 @@ import Technologies from "./pages/tech/index.tsx";
 import { PageNotFound } from "./components/Error/index.tsx";
 import Recipls from "./pages/projects/Recipls/index.tsx";
 import TaskBounty from "./pages/projects/TaskBounty/index.tsx";
+import DesignPatterns from "./pages/projects/DesignPatterns/index.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -49,6 +50,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
               <Route path={"/projects/tarotcake"} element={<TarotCake />} />
               <Route path={"/projects/recipls"} element={<Recipls />} />
               <Route path={"/projects/task-bounty"} element={<TaskBounty />} />
+              <Route
+                path={"/projects/design-patterns"}
+                element={<DesignPatterns />}
+              />
               <Route path={"/resume"} element={<Resume />} />
               <Route path={"/tech"} element={<Technologies />} />
             </Routes>
