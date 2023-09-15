@@ -15,7 +15,7 @@ const TechTag = (props: Props) => {
 
   return (
     <Box
-      width={["150px", "150px", "190px"]}
+      width={["150px", "150px", "100%"]}
       height={["55px", "55px", "75px"]}
       justifyContent={"start"}
       paddingInline={"10px"}

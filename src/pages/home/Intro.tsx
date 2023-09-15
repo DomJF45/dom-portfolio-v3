@@ -5,9 +5,13 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  Skeleton,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 const Intro = () => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <Box
       width={["100%", "100%", "100%"]}
@@ -55,11 +59,19 @@ const Intro = () => {
         </Box>
       </Stack>
       <Stack width={"100%"}>
-        <Avatar
+        <Skeleton
           boxSize={150}
-          src="https://ik.imagekit.io/wvlrlc0tr/Portfolio/me/guppycraft.JPEG?updatedAt=1694283711304"
+          rounded={"full"}
           alignSelf={{ base: "center", md: "end" }}
-        />
+          isLoaded={!loading}
+        >
+          <Avatar
+            boxSize={150}
+            src="https://ik.imagekit.io/wvlrlc0tr/Portfolio/me/guppycraft.JPEG?updatedAt=1694283711304"
+            onLoad={() => setLoading(false)}
+            alignSelf={{ base: "center", md: "end" }}
+          />
+        </Skeleton>
       </Stack>
     </Box>
   );

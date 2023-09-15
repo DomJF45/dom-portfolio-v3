@@ -64,17 +64,20 @@ const Technologies = () => {
               "#30303018",
               "rgba(255,255,255,.10)"
             )}
-            justifyContent={"center"}
+            p={5}
+            justifyContent={"start"}
             borderRadius={"18px"}
-            alignItems={"center"}
-            minHeight={["40vh", "40vh", "40vh"]}
+            alignItems={"start"}
+            minHeight={"fit-content"}
+            as={motion.div}
+            animate
+            {...{ transition: ".3s ease-in" }}
           >
             <Box
               display={"flex"}
               width={"100%"}
               height={"100%"}
               justifyContent={"end"}
-              paddingBlock={5}
               alignItems={"center"}
             >
               <AnimatePresence initial={false} mode={"wait"}>
@@ -107,13 +110,7 @@ const Technologies = () => {
                   dragConstraints={{ left: -20 }}
                   onDrag={() => handleDragFilter()}
                 >
-                  <SimpleGrid
-                    columns={[2, 2, 3]}
-                    spacing={"20px"}
-                    marginInline={"auto"}
-                    justifyContent={"space-between"}
-                    alignItems={"center"}
-                  >
+                  <SimpleGrid columns={[2, 2, 4]} gap={5} width={"100%"}>
                     {filteredTechData.map((tech, index) => {
                       return (
                         <TechTag
