@@ -9,10 +9,12 @@ import {
   LinkBox,
   LinkOverlay,
   useColorModeValue,
+  Skeleton,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { LangTag } from "../../components/ProjectComponents";
 import { ProjectData } from "../../data/ProjectsData";
+import { useProgressiveImage } from "../../hooks/useProgressiveImage";
 
 export interface iProjectData {
   name: string;
@@ -29,7 +31,7 @@ interface Props {
 
 const Project = (props: Props) => {
   const { project } = props;
-
+  const src = useProgressiveImage(project.img);
   return (
     <LinkBox>
       <Stack
@@ -40,38 +42,45 @@ const Project = (props: Props) => {
           transform: "scale(1.03)",
         }}
       >
-        <Box
-          backgroundColor={useColorModeValue(
-            "#30303018",
-            "rgba(255,255,255,.10)"
-          )}
-          backgroundImage={`url(${project.img})`}
-          backgroundPosition={"center"}
-          bgSize={"100% 100%"}
-          bgRepeat={"no-repeat"}
-          height={"200px"}
+        <Skeleton
           width={"100%"}
-          borderRadius={"12px"}
+          height={"200px"}
+          rounded={"xl"}
+          isLoaded={src ? true : false}
         >
-          <HStack
-            height={"10%"}
-            padding={"10px"}
-            alignItems={"start"}
-            justifyContent={"start"}
+          <Box
+            backgroundColor={useColorModeValue(
+              "#30303018",
+              "rgba(255,255,255,.10)"
+            )}
+            backgroundImage={`url(${project.img})`}
+            backgroundPosition={"center"}
+            bgSize={"100% 100%"}
+            bgRepeat={"no-repeat"}
+            height={"200px"}
+            width={"100%"}
+            borderRadius={"12px"}
           >
-            {project.inProgress ? project.inProgress : null}
-          </HStack>
-          <HStack
-            height={"90%"}
-            alignItems={"end"}
-            justifyContent={"end"}
-            padding={"10px"}
-          >
-            {project.languages.map((lang, index) => {
-              return <LangTag language={lang} key={index} />;
-            })}
-          </HStack>
-        </Box>
+            <HStack
+              height={"10%"}
+              padding={"10px"}
+              alignItems={"start"}
+              justifyContent={"start"}
+            >
+              {project.inProgress ? project.inProgress : null}
+            </HStack>
+            <HStack
+              height={"90%"}
+              alignItems={"end"}
+              justifyContent={"end"}
+              padding={"10px"}
+            >
+              {project.languages.map((lang, index) => {
+                return <LangTag language={lang} key={index} />;
+              })}
+            </HStack>
+          </Box>
+        </Skeleton>
         <Stack width={"80%"} alignItems={"center"}>
           <LinkOverlay as={RouterLink} to={project.url}>
             <Text textAlign={"center"} fontSize={"md"}>
