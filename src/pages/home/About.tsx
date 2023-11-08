@@ -5,6 +5,7 @@ import {
   Text,
   Divider,
   useColorModeValue,
+  Tag,
 } from "@chakra-ui/react";
 const About = () => {
   return (
@@ -24,14 +25,23 @@ const About = () => {
           color={useColorModeValue("#303030", "#ffffff63")}
           width={"80px"}
         />
-        <Text textAlign={"justify"}>
-          I am a full-stack software developer with an emphasis on front-end web
-          development. I am currently pursuing a Master of Science degree in
-          Software Engineering at Kennesaw State University, to which I am
-          expected to complete by the end of 2023. When I'm not studying, I like
-          to work on personal projects and hone my front-end and back-end
-          engineering skills.
-        </Text>
+        <Stack gap={3}>
+          <Text textAlign={"justify"} width={"100%"}>
+            Hello, I'm Dom, and I'm all about crafting exceptional web
+            experiences. Currently, I'm on a journey to earn my Master's in
+            Software Engineering at Kennesaw State University. I'm a full-stack
+            developer with a strong focus on front-end development, and I'm
+            deeply passionate about what I do.
+          </Text>
+          <Text>
+            My coding toolkit includes <Tag>React</Tag>, <Tag>Go</Tag>,{" "}
+            <Tag>Typescript</Tag>, <Tag>Node</Tag>, <Tag>Redux</Tag>, and a
+            variety of other tools and technologies. But it's not just about the
+            tools; I thrive on personal projects that allow me to hone my
+            front-end and back-end skills, and I'm a firm believer in continuous
+            learning.
+          </Text>
+        </Stack>
       </Stack>
     </Box>
   );
