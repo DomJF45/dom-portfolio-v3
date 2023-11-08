@@ -2,16 +2,13 @@ import {
   Avatar,
   Box,
   Stack,
-  Heading,
   Text,
   useColorModeValue,
-  Skeleton,
+  Img,
+  Divider,
 } from "@chakra-ui/react";
-import { useState } from "react";
 
 const Intro = () => {
-  const [loading, setLoading] = useState(true);
-
   return (
     <Box
       width={["100%", "100%", "100%"]}
@@ -19,28 +16,20 @@ const Intro = () => {
       flexDir={{ base: "column", md: "row" }}
       justifyContent={{ base: "center", md: "space-between" }}
       alignItems={{ base: "center", md: "end" }}
+      height={"100%"}
     >
-      <Stack width={"100%"} justifyContent={"center"} my={5}>
-        <Heading
-          variant={"section-title"}
-          backgroundColor={useColorModeValue("#5b5b71", "#c19996")}
-          width={"125px"}
-          height={"30px"}
-          borderRadius={"5px"}
-          fontSize={"1.4rem"}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          color={"rgba(255,255,255,.87)"}
-        >
-          Hello! I'm
-        </Heading>
-        <Heading
-          variant={"section-title"}
-          fontSize={{ base: "4rem", md: "6rem" }}
-        >
-          Dominick
-        </Heading>
+      <Stack
+        width={{ base: "100%", md: "60%" }}
+        justifyContent={"center"}
+        my={5}
+      >
+        <Img
+          src={useColorModeValue("/webbydom-light.png", "/webbydom-dark.png")}
+          width={{ base: "350px", md: "400px" }}
+          alignSelf={"center"}
+          draggable={false}
+          userSelect={"none"}
+        />
         <Box
           display={"flex"}
           width={"100%"}
@@ -58,20 +47,17 @@ const Intro = () => {
           </Text>
         </Box>
       </Stack>
-      <Stack width={"100%"}>
-        <Skeleton
-          boxSize={150}
-          rounded={"full"}
-          alignSelf={{ base: "center", md: "end" }}
-          isLoaded={!loading}
-        >
-          <Avatar
-            boxSize={150}
-            src="https://ik.imagekit.io/wvlrlc0tr/Portfolio/me/guppycraft.JPEG?updatedAt=1694283711304"
-            onLoad={() => setLoading(false)}
-            alignSelf={{ base: "center", md: "end" }}
-          />
-        </Skeleton>
+      <Stack>
+        <Divider orientation="vertical" />
+      </Stack>
+      <Stack width={"40%"}>
+        <Avatar
+          boxSize={180}
+          border={"2px solid"}
+          borderColor={useColorModeValue("#303030", "whiteAlpha.300")}
+          src="https://ik.imagekit.io/wvlrlc0tr/Portfolio/me/guppycraft.JPEG?updatedAt=1694283711304"
+          alignSelf={{ base: "center", md: "center" }}
+        />
       </Stack>
     </Box>
   );

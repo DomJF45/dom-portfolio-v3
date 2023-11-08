@@ -4,6 +4,7 @@ import {
   SimpleGrid,
   Divider,
   useColorModeValue,
+  Tag,
 } from "@chakra-ui/react";
 
 interface Props {
@@ -19,13 +20,13 @@ export const InProgress = () => {
   return (
     <>
       <Box
-        width={"70px"}
+        as={Tag}
+        width={"fit-content"}
         height={"25px"}
         backgroundColor={useColorModeValue("yellow.500", "#ebbf8e")}
         display={"flex"}
         justifyContent={"center"}
         alignItems={"center"}
-        borderRadius={"15px"}
         color={"black"}
       >
         <Text fontSize={"2xs"}>In Progress</Text>
@@ -41,13 +42,13 @@ export const LangTag = (props: Props) => {
     return (
       <>
         <Box
+          as={Tag}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
           width={"85px"}
           height={"35px"}
           backgroundColor={"#c19996"}
-          borderRadius={"5px"}
         >
           <Text fontSize={"xs"}>{language}</Text>
         </Box>
@@ -64,7 +65,7 @@ export const LangTag = (props: Props) => {
         width={"65px"}
         height={"25px"}
         backgroundColor={"#c19996"}
-        borderRadius={"15px"}
+        as={Tag}
       >
         <Text fontSize={"2xs"}>{language}</Text>
       </Box>

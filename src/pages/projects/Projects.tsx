@@ -59,7 +59,7 @@ const Project = (props: Props) => {
             bgRepeat={"no-repeat"}
             height={"200px"}
             width={"100%"}
-            borderRadius={"12px"}
+            rounded={"lg"}
           >
             <HStack
               height={"10%"}

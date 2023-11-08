@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { MdOutlineMenu } from "react-icons/md";
-import { TiAnchor } from "react-icons/ti";
+import { TbCoffin } from "react-icons/tb";
 import LightModeToggle from "./LightModeToggle";
 import { AnimatePresence } from "framer-motion";
 import MobileNav from "./MobileNav";
@@ -56,9 +56,9 @@ const Navbar = () => {
                 gap="5px"
                 cursor={"pointer"}
               >
-                <TiAnchor size={25} />
+                <TbCoffin size={25} />
                 <Link as={RouterLink} to="/">
-                  Dominick Founds
+                  WebbyDom
                 </Link>
               </Heading>
             </LinkBox>

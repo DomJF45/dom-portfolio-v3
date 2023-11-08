@@ -1,6 +1,0 @@
-const ProjectBio = () => {
-
-  return (
-    
-  )
-}
