@@ -11,6 +11,13 @@ export interface iProjectData {
 
 export const ProjectData: iProjectData[] = [
   {
+    name: "Gomodoro",
+    bio: "A CLI pomodoro timer for hacker productivity",
+    img: "https://ik.imagekit.io/wvlrlc0tr/Portfolio/Gomodoro/gomodorobg.png?updatedAt=1699559387018",
+    url: "/projects/gomodoro/",
+    languages: ["Go"],
+  },
+  {
     name: "Recipls.",
     bio: "A web-application for saving recipes and sharing with friends.",
     img: "https://ik.imagekit.io/wvlrlc0tr/Portfolio/recipls/recipls-landing.png?updatedAt=1694211315350",

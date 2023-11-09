@@ -16,6 +16,11 @@ import { useDownloadResume } from "../../hooks/useDownloadResume";
 
 const Resume = () => {
   const downloadResume = useDownloadResume();
+
+  const handleDownload = () => {
+    downloadResume(); //eslint-disable-line
+  };
+
   return (
     <>
       <Stack
@@ -28,76 +33,100 @@ const Resume = () => {
         padding={3}
       >
         <HStack width={"100%"} justifyContent={"space-between"}>
-          <Header>Summary</Header>
-          <Button onClick={() => downloadResume}>
+          <Header>Skills</Header>
+          <Button onClick={handleDownload}>
             Download
             <IoDownloadOutline size={15} />
           </Button>
         </HStack>
         <Divider width={"100%"} />
-        <ResumeBody>
-          Full Stack Engineer with proficiency in React, Typescript, and Node.JS
-        </ResumeBody>
-        <Header>Skills</Header>
-        <Divider width={"100%"} />
-        <HStack width={"100%"} justifyContent={"space-between"}>
-          <ResumeBody>Proficient:</ResumeBody>
+        <HStack width={"100%"}>
           <ResumeBody>
-            React, Node.JS, Typescript, REST API, HMTL, CSS, OOP
+            <strong>Proficient:</strong>
+          </ResumeBody>
+          <ResumeBody>
+            React, Node.JS, Typescript, Go, HMTL, CSS, OOP, SQL
           </ResumeBody>
         </HStack>
-        <HStack width={"100%"} justifyContent={"space-between"}>
-          <ResumeBody>Some Experience:</ResumeBody>
-          <ResumeBody>SQL, AWS, Java, C++, Python, Design Patterns</ResumeBody>
-        </HStack>
-        <HStack width={"100%"} justifyContent={"space-between"}>
-          <ResumeBody>Currently Learning:</ResumeBody>
-          <ResumeBody>Ruby on Rails, React Native, GraphQL</ResumeBody>
+        <HStack width={"100%"}>
+          <ResumeBody>
+            <strong>Some Experience:</strong>
+          </ResumeBody>
+          <ResumeBody>AWS, Python</ResumeBody>
         </HStack>
         <Header>Projects</Header>
         <Divider width={"100%"} />
         <Box width={"100%"}>
           <UnorderedList width={"95%"} fontSize={["sm", "sm", "md"]}>
             <ListItem>
-              2022 – Lab Rats – Created and continue to maintain Lab Rats, a
-              full-stack research laboratory task management system made with
-              React (client-slide) and Node (server-side) with a MongoDB NoSQL
-              database under an AGILE development process. Applied systems
-              architecture knowledge by diagramming the architecture and
-              user-flow. In addition, scheduled each part of the web-apps
-              lifecycle and broke it down into phases which was used to
-              calculate a critical path using the Critical Path Method (CPM) for
-              a timeline regarding product delivery.
+              2023 - <strong>Recipls</strong> - Recipe saving application for
+              copying and pasting rich-text recipes and saving them built with
+              React, Typescript, Go, and MongoDB. Utilized Redux for state
+              management. Used React-Query for data fetching. Implemented JWT
+              tokens for authorization. configured AWS and S3 buckets to store
+              user images. Practiced Test Driven Development (TDD)
+              methodologies.
             </ListItem>
             <ListItem>
-              2021 – NEAARRD Lab Website – Created and continue to maintain the
-              NEAARRD Lab’s website built with React. The website was built for
-              a cognitive neuropsychological research laboratory at Kennesaw
-              State University. The website contains links for projects, current
-              studies, past research, and information for lab members, as well
-              as a contact section for general consultation or applications to
-              join the lab.
+              2023 - <strong>Task Bounty</strong> - Project and Task management
+              web application developed with React, Typescript, Go, and
+              Chakra-UI. Deployed Go server to Fly.io and implemented CI tools
+              for Continuous Integration. Implemented REST API for communication
+              between client and server. Unit tests using Vitest and Jest.
             </ListItem>
             <ListItem>
-              2022 – Personal Website – Created and continue to maintain a
-              personal website using Next.JS, React, and CSS. The website
-              contains links to projects, blog posts, and contact information.
+              2023 - <strong>xiv-minion-dex</strong> - Pokédex-like application
+              for loading and querying all Final Fantasy XIV© minions built with
+              React, Typescript, Chakra-UI, and Redux, powered by ffxivcollect
+              API. Developed debounce hooks to reduce the number of API calls.
             </ListItem>
             <ListItem>
-              2021 – Vaping Dependency – Created a full-stack psychological web
-              experiment that consists of a modified Stroop Task using Node and
-              Express (server-side), AWS S3 buckets for CSV data storage, and
-              standard HTML, JavaScript, and CSS alongside the JsPsych
-              JavaScript Library.
+              2022 - <strong>Tarot Cake</strong> - Tarot Card web-application
+              built with React, Typescript, Node, Express, MongoDB, and CSS3.
+              Utilized Framer Motion to create high quality card flip
+              animations.
             </ListItem>
             <ListItem>
-              2021 – Stroop Task - Created the Stroop task (cognitive
-              psychological evaluation measure) that was programmed entirely in
-              C++. The project utilized the allegro 5 game library to construct
-              visual stimuli triggered by user input. Additionally, the project
-              utilized fundamental algorithms and data structures to create a
-              working psychological experiment that tracks and logs the data
-              obtained from the user input.
+              2022 – <strong>Lab Rats</strong> – Created and continue to
+              maintain Lab Rats, a full-stack research laboratory task
+              management system made with React (client-slide) and Node
+              (server-side) with a MongoDB NoSQL database under an AGILE
+              development process. Applied systems architecture knowledge by
+              diagramming the architecture and user-flow. In addition, scheduled
+              each part of the web-apps lifecycle and broke it down into phases
+              which was used to calculate a critical path using the Critical
+              Path Method (CPM) for a timeline regarding product delivery.
+            </ListItem>
+            <ListItem>
+              2021 – <strong>NEAARRD Lab Website</strong> – Created and continue
+              to maintain the NEAARRD Lab’s website built with React. The
+              website was built for a cognitive neuropsychological research
+              laboratory at Kennesaw State University. The website contains
+              links for projects, current studies, past research, and
+              information for lab members, as well as a contact section for
+              general consultation or applications to join the lab.
+            </ListItem>
+            <ListItem>
+              2022 – <strong>Personal Website</strong> – Created and continue to
+              maintain a personal website using Next.JS, React, and CSS. The
+              website contains links to projects, blog posts, and contact
+              information.
+            </ListItem>
+            <ListItem>
+              2021 – <strong>Vaping Dependency</strong> – Created a full-stack
+              psychological web experiment that consists of a modified Stroop
+              Task using Node and Express (server-side), AWS S3 buckets for CSV
+              data storage, and standard HTML, JavaScript, and CSS alongside the
+              JsPsych JavaScript Library.
+            </ListItem>
+            <ListItem>
+              2021 – <strong>Stroop Task</strong> - Created the Stroop task
+              (cognitive psychological evaluation measure) that was programmed
+              entirely in C++. The project utilized the allegro 5 game library
+              to construct visual stimuli triggered by user input. Additionally,
+              the project utilized fundamental algorithms and data structures to
+              create a working psychological experiment that tracks and logs the
+              data obtained from the user input.
             </ListItem>
           </UnorderedList>
         </Box>

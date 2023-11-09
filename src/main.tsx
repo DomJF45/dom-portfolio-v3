@@ -21,6 +21,7 @@ import { PageNotFound } from "./components/Error/index.tsx";
 import Recipls from "./pages/projects/Recipls/index.tsx";
 import TaskBounty from "./pages/projects/TaskBounty/index.tsx";
 import DesignPatterns from "./pages/projects/DesignPatterns/index.tsx";
+import Gomodoro from "./pages/projects/Gomodoro/index.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -54,6 +55,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
                 path={"/projects/design-patterns"}
                 element={<DesignPatterns />}
               />
+              <Route path={"/projects/gomodoro"} element={<Gomodoro />} />
               <Route path={"/resume"} element={<Resume />} />
               <Route path={"/tech"} element={<Technologies />} />
             </Routes>
