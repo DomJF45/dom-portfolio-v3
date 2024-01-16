@@ -59,7 +59,13 @@ const Navbar = () => {
               >
                 <TbCoffin size={25} />
                 <Link as={RouterLink} to="/">
-                  <Img src="/webbydom-trad-dark.png" width={"130px"} />
+                  <Img
+                    src={useColorModeValue(
+                      "/webbydom-trad-light.png",
+                      "/webbydom-trad-dark.png"
+                    )}
+                    width={"130px"}
+                  />
                 </Link>
               </Heading>
             </LinkBox>

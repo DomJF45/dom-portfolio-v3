@@ -45,7 +45,7 @@ const Intro = () => {
         <Divider orientation="vertical" />
       </Stack>
       <Avatar
-        boxSize={"200px"}
+        boxSize={"150px"}
         border={"2px solid"}
         borderColor={useColorModeValue("#303030", "whiteAlpha.300")}
         src="https://ik.imagekit.io/wvlrlc0tr/Portfolio/me/IMG_6552.jpeg?updatedAt=1705437589135"
