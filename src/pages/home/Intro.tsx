@@ -4,8 +4,8 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  Img,
   Divider,
+  Heading,
 } from "@chakra-ui/react";
 
 const Intro = () => {
@@ -15,21 +15,15 @@ const Intro = () => {
       display={"flex"}
       flexDir={{ base: "column", md: "row" }}
       justifyContent={{ base: "center", md: "space-between" }}
-      alignItems={{ base: "center", md: "end" }}
+      alignItems={{ base: "center", md: "start" }}
       height={"100%"}
     >
       <Stack
+        justifyContent={"start"}
         width={{ base: "100%", md: "60%" }}
-        justifyContent={"center"}
         my={5}
       >
-        <Img
-          src={useColorModeValue("/webbydom-light.png", "/webbydom-dark.png")}
-          width={{ base: "350px", md: "400px" }}
-          alignSelf={"center"}
-          draggable={false}
-          userSelect={"none"}
-        />
+        <Heading size={"2xl"}>Hi! I'm Dom,</Heading>
         <Box
           display={"flex"}
           width={"100%"}
@@ -50,15 +44,13 @@ const Intro = () => {
       <Stack>
         <Divider orientation="vertical" />
       </Stack>
-      <Stack width={"40%"}>
-        <Avatar
-          boxSize={180}
-          border={"2px solid"}
-          borderColor={useColorModeValue("#303030", "whiteAlpha.300")}
-          src="https://ik.imagekit.io/wvlrlc0tr/Portfolio/me/guppycraft.JPEG?updatedAt=1694283711304"
-          alignSelf={{ base: "center", md: "center" }}
-        />
-      </Stack>
+      <Avatar
+        boxSize={"200px"}
+        border={"2px solid"}
+        borderColor={useColorModeValue("#303030", "whiteAlpha.300")}
+        src="https://ik.imagekit.io/wvlrlc0tr/Portfolio/me/IMG_6552.jpeg?updatedAt=1705437589135"
+        alignSelf={{ base: "center", md: "end" }}
+      />
     </Box>
   );
 };

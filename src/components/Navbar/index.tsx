@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   LinkBox,
   Link,
+  Img,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { MdOutlineMenu } from "react-icons/md";
@@ -58,7 +59,7 @@ const Navbar = () => {
               >
                 <TbCoffin size={25} />
                 <Link as={RouterLink} to="/">
-                  WebbyDom
+                  <Img src="/webbydom-trad-dark.png" width={"130px"} />
                 </Link>
               </Heading>
             </LinkBox>
